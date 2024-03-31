@@ -1,0 +1,24 @@
+{
+  "name": "gemini-bot-1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/gemini-bot-1/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "gemini-bot-1:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "gemini-bot-1:build:development"
+        },
+        "production": {
+          "buildTarget": "gemini-bot-1:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
